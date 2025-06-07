@@ -1,0 +1,78 @@
+body{
+    background: rgb(239, 241, 243);
+    padding: 20px;
+    direction: rtl;
+}
+
+.bage_container{
+    background: #fafafa;
+    height: 95vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+table{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.input-search2{
+
+    border-style: none;
+    /* padding: 10px; */
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: rgb(57, 56, 56);
+    padding-right: 40px;
+    color:black;
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid grey;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    cursor: pointer;
+  }
+  .icon-container,
+.icon-container2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.icon-name1,
+.icon-name2 {
+  display: none;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.icon-container:hover .icon-name1 {
+  display: block;
+}
+
+.icon-container2:hover .icon-name2 {
+  display: block;
+}
+
+.icon-container,
+.icon-container2 {
+  background: #ffffff;
+}
+
+.icon-container:hover,
+.icon-container2:hover {
+  background: #1c2230;
+  color: #ffffff;
+}
