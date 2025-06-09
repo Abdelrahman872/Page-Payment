@@ -12,7 +12,7 @@ class Add extends Component
     public $note;
 
 
-    public function add(){                /////////adddddddddddd
+    public function add(){                
         $Data = $this->validate([
             'amount'  => 'required|numeric|min:0',
             'date'  => 'required|date',
