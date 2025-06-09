@@ -9,13 +9,13 @@ class Data extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    protected $listeners = ['refreshPayments' => '$refresh'];   //// لعمل تحديث لبيانات الجدول
+    protected $listeners = ['refreshPayments' => '$refresh'];   
 public $start_date;
 public $end_date;
 
 public function resetFilters()
 {
-    $this->reset(['start_date', 'end_date']); // إعادة تعيين الحقول
+    $this->reset(['start_date', 'end_date']);
 }
 
     public function render()

@@ -20,10 +20,10 @@ class Add extends Component
         ]);
 
         Payment::create($Data);
-        $this->dispatch('refreshPayments');          ////  لعمل تحديث لبيانات الجدول
-        $this->reset(['amount', 'date' ,'note']);     ////  لعمل تفريغ لبيانات الموديل
+        $this->dispatch('refreshPayments');          
+        $this->reset(['amount', 'date' ,'note']);
 
-        $this->dispatch('modalClose');             ////  لغلق الموديل بعد عمليه الحذف
+        $this->dispatch('modalClose');
     }
     public function render()
     {

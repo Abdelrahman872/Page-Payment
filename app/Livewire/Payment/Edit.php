@@ -12,18 +12,18 @@ class Edit extends Component
     public $amount;
     public $date;
 
-     protected $listeners = ['editPayment'];   //// نفس function الزر
+     protected $listeners = ['editPayment'];
 
-    public function editPayment($id){        //// نفس function الزر
+    public function editPayment($id){
         $payment = Payment::find($id);
         $this->id = $payment->id;
         $this->note = $payment->note;
         $this->amount = $payment->amount;
         $this->date = $payment->date;
-        $this->dispatch('editModal');       //// لفتح الموديل ووضع القيم فيه
+        $this->dispatch('editModal');
     }
 
-public function updatePayment()            //// submit ال form
+public function updatePayment()
     {
         $this->validate([
             'amount' => 'required|numeric|min:0',
@@ -40,8 +40,8 @@ public function updatePayment()            //// submit ال form
             'date' => $this->date,
         ]);
 
-        $this->dispatch('refreshPayments');    ////  لعمل تحديث لبيانات الجدول
-        $this->dispatch('modalClose');        ////   لغلق الموديل بعد عمليه التحديث
+        $this->dispatch('refreshPayments');
+        $this->dispatch('modalClose');       
     }
 
     public function render()

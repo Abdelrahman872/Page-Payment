@@ -10,9 +10,9 @@ class Delete extends Component
 
      public $id;
 
-    protected $listeners = ['deletePayment'];   //// نفس function الزر
+    protected $listeners = ['deletePayment'];
 
-    public function deletePayment($id){        //// نفس function الزر
+    public function deletePayment($id){
         $this->id = $id;
     }
 
@@ -22,8 +22,8 @@ class Delete extends Component
         Payment::destroy($this->id);
 
 
-        $this->dispatch('refreshPayments');   ////  لعمل تحديث لبيانات الجدول
-        $this->dispatch('modalClose');        ////  لغلق الموديل بعد عمليه الحذف
+        $this->dispatch('refreshPayments');  
+        $this->dispatch('modalClose');
    }
 
     public function render()
