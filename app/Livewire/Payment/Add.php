@@ -12,7 +12,7 @@ class Add extends Component
     public $note;
 
 
-    public function add(){
+    public function add(){                /////////adddddddddddd
         $Data = $this->validate([
             'amount'  => 'required|numeric|min:0',
             'date'  => 'required|date',
@@ -20,7 +20,7 @@ class Add extends Component
         ]);
 
         Payment::create($Data);
-        $this->dispatch('refreshPayments');          
+        $this->dispatch('refreshPayments');
         $this->reset(['amount', 'date' ,'note']);
 
         $this->dispatch('modalClose');
